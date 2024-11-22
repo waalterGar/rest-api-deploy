@@ -1,0 +1,29 @@
+### Recuperar todas las películas
+GET http://localhost:3000/movies
+
+### Recuperar una película por ID
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Recuperar todas las películas de un género
+GET http://localhost:3000/movies?genre=action
+
+###Crear una película
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "The Godfather",
+    "year": 1972,
+    "director": "Francis Ford Coppola",
+    "duration": 175,
+    "genre": "crime",
+    "rate": 9
+}
+
+### Actualizar una película
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "rate": 8
+}
